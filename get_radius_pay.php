@@ -57,7 +57,7 @@ include './utility_radius_pay.php';
 
 <div id="list_cmnt" style="margin-top:10px;font-size:small;color:blue; text-align: center;"></div>
 
-<!-- $$$$$$$$$$$$$$$$$$$$$$$$$ таблица -->
+<!-- @@@@@@@1111111 таблица -->
 <!-- Контейнер где будет вставлена таблица -->
 <!-- Контейнер где будет вставлена таблица -->
 <div id="tableContainer" style="margin-top: 20px;"></div>
