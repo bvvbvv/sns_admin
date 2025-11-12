@@ -1,0 +1,335 @@
+BODY {
+margin: 0px 0px 0px 0px;
+padding: 2px 2px 2px 2px;
+background: #FFFFFF;
+}
+.ac_result, .ac_search {
+	background-color: #fafad2;
+}
+.ac_search{
+	background-image: url(image/search1.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+table.ds_salat {
+	border-collapse:collapse;
+    z-index: 0;
+}
+.disp_none{
+ display: none;
+}
+div.no_scroll {
+    overflow: hidden;
+}
+table.ds_salat thead th, table.ds_salat thead td{
+background-image1: url(image/head_bg_bl.gif);
+border:1px solid ActiveBorder;
+border-collapse: collapse;
+	border-bottom1: 1px solid lightgrey;
+	border-right1: 1px solid lightgrey;
+	font-family: Arial;
+	font-size:11px;
+	font-weight: bold;
+	text-align: center;
+	margin:0px;
+	padding:0px;
+	height: 28px;
+}
+table.ds_salat tr{
+background-color1: #E7FFC8;
+height: 28px;
+}
+table.ds_salat11 tbody{
+    height: 200;
+    overflow-y: auto;
+    
+}
+table.ds_salat td{
+border: 1px solid ActiveBorder ;
+padding1: px;
+    border-color1 : white Gray Gray white;
+	border-color1 : gray gray gray gray;
+	font-family:Arial;
+	font-size:11px;
+    -moz-user-select:none;
+    -moz-user-select:-moz-none;
+    padding-top:0px;
+    padding-bottom:0px;
+    empty-cells:show;
+    text-align: center;
+    white-space: normal;
+	 	}
+.tr_light{ background-color: #F4FFEB;}
+.tr_dark{ background-color: #E7FFC8;}
+
+table.split_blue {
+ border-collapse:collapse;
+}
+table.split_blue thead td{
+background-image: url(image/head_bg_gr.gif);
+border:1px solid gray;
+        font-family:verdana, Arial;
+        font-size:10px;
+        font-weight: bold;
+        text-align: center;
+        margin:1px;
+        padding:3px;
+        height: 20px;
+}
+table.split_blue tfoot td {
+background-image: url(image/head_bg_gr.gif);
+border:1px solid gray;
+        font-family:verdana, Arial;
+        font-size:10px;
+        font-weight: bold;
+        text-align: center;
+        margin:1px;
+        padding:3px;
+        height: 20px;
+}
+table.split_blue tbody td{    
+border: 1px solid gray;
+padding: 2px;
+font-family:verdana, Arial;
+ font-size:10px;
+  overflow:hidden;
+    padding-top:0px;
+    padding-bottom:0px;
+    empty-cells:show;
+   text-align: center;
+  }
+  table.split_blue tbody td textarea{
+      height: 20px;
+      width: 100%;
+  }
+table.split_blue tbody tr{
+background-color: lightgray;
+height: 20px;
+}
+.input1, .input_ac, .input_sys, .input_okpo, .input_name, .input_sum, .date_input, .input_expand, ul.auto-complete-list li
+{
+        font: 11px normal serif;
+        background1: #F5F5F5;
+        border: 1px solid Gray;
+        text-align: left;
+        margin: 0px;
+}
+
+.textarea1 {
+        background: #F5F5F5;
+        border: 1px solid Gray;
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif ;
+        font-size: 11px;
+        line-height: 11px;
+     }
+ div[dataset='list_cmnt']
+ {
+  font-family:Arial;
+    font-size:11px;
+    text-align: center;
+    color: green;
+    margin: 10px;
+ }
+ .col_select {
+        background-color: #F3ECA9;
+}
+.row_select {
+        background-color: #CCCCFF;
+}
+.row2_select {
+        background-color: #cce6ff;
+}
+.td_select {
+        background-color: white;
+}
+.div_menu-style {
+    border-width: 1;
+    border-style: solid;
+    border-color:  #EB3BA9;
+    background-color: #ffffff;
+    z-index: 900;
+    position: absolute;
+    visibility: hidden;
+}
+.tdhead {
+        font-size: 12px;
+        font-family: Arial;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        }
+.form_search td{
+     font-size: 12px;
+     font-family: Arial;
+     color: black;
+}
+.equip {
+color: blue;
+font-weight: bold;
+}
+.unknown {
+ font-weight: bold;
+ color: black;
+}
+.head3 {
+background: #CCCCFF;
+color: #D1346B;
+font-weight: bold;
+font-family: "Times New Roman", Times, serif;
+font-size: 14px;
+text-align: center;
+}
+.head2 {
+        font-size: 12px;
+        font-family: Arial;
+        font-weight: bold;
+        text-align: center;
+}
+.submit1 {
+        margin: 5px;
+        height: 18px;
+        width: 60px;
+        font-size: 12px;
+        font-family: Arial;
+        font-weight: bold;
+        background1: #F5F5F5;
+        text-align: center;
+        background1: #CCCCFF;
+        cursor: pointer;
+        background-image: url(image/head_bg_gr.gif);
+        border:1px solid gray;
+        vertical-align: middle;
+}
+ .ui-dialog .ui-dialog-title {
+    color: blue;
+    float:inherit;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: bold;
+    background1: #F5F5F5;   
+}   
+.ui-tabs .ui-tabs-nav li a {
+    width: 95%;
+    padding: 5px;
+    text-align: center;
+    margin: 0px;
+}
+.ui-tabs-panel {
+    padding: 0.3em 1.4em;
+}
+div.mymenu{
+ width:95%;
+ display: none;
+ 
+ position: absolute;
+ top:0px;
+ left:0px;
+ z-index: 10;
+}
+div.mymenu div {
+   height:20px;
+   background:#F5F5F5;  
+}
+div.mymenu A {
+  background:#F5F5F5;    
+}
+div.mymenu A:hover
+{
+ background:yellow;
+}
+/* ---------------- flexmenu --------- */
+.flexdropdownmenu, .flexdropdownmenu ul{ /*topmost and sub ULs, respectively*/
+font: normal 13px Verdana;
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+background: white;
+border: 1px solid black;
+border-bottom-width: 0;
+visibility: hidden;
+display: none; /*collapse all sub menus to begin with*/
+box-shadow: 3px 3px 8px #818181; /*shadow for CSS3 capable browsers.*/
+-webkit-box-shadow: 3px 3px 8px #818181;
+-moz-box-shadow: 3px 3px 8px #818181;
+}
+
+
+.flexdropdownmenu li{
+position: relative;
+}
+
+.flexdropdownmenu li a{
+display: block;
+width: 160px; /*width of menu (not including side paddings)*/
+color: black;
+background1: #fae7a9;
+background:  #ecffed;
+border-bottom: 1px solid black;
+text-decoration: none;
+padding: 4px 5px;
+}
+
+* html .flexdropdownmenu li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 160px; /*width of menu (include side paddings of LI A*/
+}
+
+.flexdropdownmenu li a:hover, .flexdropdownmenu li.selected>a{
+background1: #F0CE7D;
+background: #cbffc8;
+background:#c5f3f7;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 6px;
+right: 5px;
+}
+/* ---------------- flexmenu end --------- */
+/* ---  Tabs ---- */
+/* Layout helpers
+----------------------------------*/
+/* .ui-state-default, .ui-widget-content .ui-state-default { border: 1px solid #d3d3d3; background: #C5F3F7 url(image/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555; outline: none; } */
+.ui-state-default, .ui-widget-content .ui-state-default { border: 1px solid #d3d3d3; background: url(image/skin_modern_header.png) repeat-x; font-weight: normal; color: #555555; outline: none; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #555555; text-decoration: none; outline: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border: 1px solid #999999; background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; outline: none; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #212121; text-decoration: none; outline: none; }
+.ui-state-active, .ui-widget-content .ui-state-active { border: 1px solid #aaaaaa; background: #fffff0 url(image/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; outline: none; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #212121; outline: none; text-decoration: none; }
+/*----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute; left: -99999999px; }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 14px; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+.ui-helper-clearfix { display:block; }
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+.ui-widget-header { border: 1px solid #aaaaaa; background: #cccccc url(image/ui-bg_highlight-soft_75_blue2_1x100.png)  repeat-x; color: #222222; font-weight: bold;text-align: center;font-family: serif; font-size: 14px;} 
+/*.ui-widget-header { border: 1px solid #aaaaaa; background: url(image/skin_modern_header.png) 50% 50% repeat-x; color: #222222; font-weight: bold;text-align: center; font-size: 12px;} */
+.ui-widget-header a { color: #222222; }
+.ui-corner-all { -moz-border-radius: 4px; -webkit-border-radius: 4px; }
+/*----------------------------------*/
+.ui-tabs { padding: .2em; zoom: 1; }
+.ui-tabs .ui-tabs-nav { list-style: none; position: relative; padding: .2em .2em 0; }
+.ui-tabs .ui-tabs-nav li { position: relative; float: left; border-bottom-width: 0 !important; margin: 0 .2em -1px 0; padding: 0; }
+.ui-tabs .ui-tabs-nav li a { float: left; text-decoration: none; padding: 4px 4px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 1px; border-bottom-width: 0; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel { padding: 1em 1.4em; display: block; border-width: 0; background: none; background-color: #fffff0; }
+.ui-tabs .ui-tabs-hide { display: none; position1: absolute;  left1: -10000px;}
+
+
+
+

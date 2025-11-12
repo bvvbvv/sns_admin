@@ -1,0 +1,11 @@
+SQL/
+*loc.*
+archive/
+uploads/
+logout/
+.vscode/
+*.env
+*.txt
+*.log
+*.bat
+*_old.*

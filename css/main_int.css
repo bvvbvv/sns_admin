@@ -1,0 +1,236 @@
+BODY {
+margin: 0px 0px 0px 0px;
+padding: 2px 2px 2px 2px;
+background: #FFFFF0;
+}
+.message {
+        font-size: 12px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        color: red;
+}
+.head1 {
+        font-size: 12px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        text-align: center;
+}
+.head2 {
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+}
+
+form {
+        display: inline;
+}
+.tdhead {
+        font-size: 12px;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        }
+.tdtext {
+        font-size: 12px;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        }
+.input11 {
+        font: 11px Arial, Helvetica, sans-serif;
+        background: #F5F5F5;
+        text-align: left;
+        margin: 0px;
+}
+.input_ac1{
+}
+.input1, .input_ac, .input_sys, .input_okpo, .input_name, .input_sum, .input_expand, .input_give
+{
+        font: 11px normal serif;
+        background: #F5F5F5;
+        border: 1px solid Gray;
+        text-align: left;
+        margin: 2px;
+}
+
+.textarea1 {
+        background: #F5F5F5;
+        border: 1px solid Gray;
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif ;
+        font-size: 12px;
+        line-height: 12px;
+     }
+ .select1 {
+        margin: 2px;
+        font: 12px arial;
+        background: #F5F5F5;
+        font-family: sans-serif;
+        font-style: normal;
+}
+.submit1 {
+        margin: 2px;
+        font: 11px normal serif;
+        background: #F5F5F5;
+        text-align: center;
+}
+.submit2 {
+        font: 10px bold serif;
+        background:#18BBBD;
+        color:#FFFFF0;
+       }
+table.grtable, .gr2table , .grtableedit {
+        background1: #c6eaec;
+        border-collapse: collapse;
+        border-spacing: 6px;
+        empty-cells: show;
+        position: relative;
+        top1: 10px;
+        bottom1: 10px;
+        margin: 4px;
+        margin1-bottom: 4px;
+}
+table.grtable thead td {
+background: #e9e9e9;
+}
+.grrowedit {
+	       background: #F5F5DC;
+}
+.grtable td,th {
+        border: 1px solid Maroon;
+}
+.grtableedit td {
+        border: 1px solid Maroon;
+}
+.head3 {
+background: #CCCCFF;
+color: #D1346B;
+font-weight: bold;
+font-family: "Times New Roman", Times, serif;
+font-size: 14px;
+text-align: center;
+}
+.n2table {
+        background: none;
+        border-collapse: collapse;
+        border-spacing: 6px;
+        empty-cells: show;
+        position: relative;
+        top: 10px;
+}
+.n2table td {
+       border: none;
+        }
+.font11
+       {
+       font-family: Arial, Helvetica, sans-serif ;
+       font-size: 12px;
+       line-height: 12px;
+       }
+.font2
+       {
+       font: bold;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 10px;
+       text-align: center;
+       }
+/* ---------------------------------------- */
+.table-style {
+    border-width: 1;
+    border-style: solid;
+    border-color: Maroon;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-align: center;
+}
+/* Default attributes of DIV containing table container for entire calendar.
+ * You probably don't want to alter this style.
+ */
+.divc-style {
+    z-index: +990;
+    position: absolute;
+    visibility: hidden;
+    display1:none;
+}
+.div_menu-style {
+    border-width: 1;
+    border-style: solid;
+    border-color:  #EB3BA9;
+    background-color: #ffffff;
+    z-index: +900;
+    position: absolute;
+    visibility: hidden;
+}
+.col_select {
+	background-color: #F3ECA9;
+}
+.row_select {
+	background-color: #CCCCFF;
+}
+.row2_select {
+	background-color: #cce6ff;
+}
+.td_select {
+	background-color: white;
+}
+
+.norma {
+background-color: #FFDAB9;
+
+}
+.linklike {
+text-decoration: underline;
+cursor: pointer;
+}
+.system {
+  text-decoration: underline;
+  cursor: pointer;
+  color:gray;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 10px;
+  text-align: center;
+}
+.equip, .unknown {
+ color: blue;
+font-weight: bold;
+font-family: "Times New Roman", Times, serif;
+font-size: 10px;
+text-align: center;
+}
+.unknown {
+ color: black;
+}
+.rowspec1
+{
+    background-color: #FFEAD7;
+    color: #6D6D6D;
+}
+.rowspec2
+{
+    background-color: #FFC693;
+}
+
+/*
+ th.header {
+        background-image: url(bg.gif);
+        cursor: pointer;
+        font-weight: bold;
+        background-repeat: no-repeat;
+        background-position: center left;
+        padding-left: 20px;
+        border-right: 1px solid #dad9c7;
+        margin-left: -1px;
+}
+th.headerSortUp {
+        background-image: url(asc.gif);
+        background-color: #3399FF;
+}
+th.headerSortDown {
+        background-image: url(desc.gif);
+        background-color: #3399FF;
+}
+*/
+
+
