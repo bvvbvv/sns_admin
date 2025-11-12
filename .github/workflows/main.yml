@@ -13,7 +13,7 @@ jobs:
         with:
           host: 193.110.112.66
           username: vba
-          key: copyFromCopy
+          password: copyFromCopy
           script: |
             cd /var/www/vh_my.dipt.ua/html/new/admin_bvv
             git pull
