@@ -9,8 +9,8 @@ DECLARE done BOOLEAN DEFAULT 0;
 DECLARE cur1 CURSOR FOR SELECT id, longname FROM `radius`.`user` WHERE name like 'rs_damansk' or name like 'rs_pshichenko' or name like 'rs_isaoptik' or name like 'rs_isaenko';
 DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
 drop table if EXISTS `rtemp`;
-create temporary table `rtemp` (`rid` int not null, res_name char(128), `cnt_bank` int(11),`sum_bank` DECIMAL(10,2),
-`cnt_local` int(11),`sum_local` DECIMAL(10,2),`cnt_ekvar` int(11),`sum_ekvar` DECIMAL(10,2),`cnt_tot` int(11),`tot_sum` DECIMAL(10,2));
+create temporary table `rtemp` (`rid` int not null, res_name char(128) character set utf8, `cnt_bank` int(11),`sum_bank` DECIMAL(10,2),
+`cnt_local` int(11),`sum_local` DECIMAL(10,2),`cnt_ekvar` int(11),`sum_ekvar` DECIMAL(10,2),`cnt_tot` int(11),`tot_sum` DECIMAL(10,2)) character set utf8;
 OPEN cur1;
 read_loop: LOOP
 FETCH cur1 INTO rid,res_name;
