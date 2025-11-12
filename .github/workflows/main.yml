@@ -11,10 +11,10 @@ jobs:
       - name: Connect via SSH and pull
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          host: ${{ '193.110.112.66' }}
+          username: ${{ 'vba' }}
+          key: ${{ 'copyFromCopy' }}
           script: |
             cd /var/www/vh_my.dipt.ua/html/new/admin_bvv
-            git pull origin main
+            git pull
   
