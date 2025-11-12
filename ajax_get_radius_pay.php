@@ -100,6 +100,7 @@ function test_select_ajax($w_arr, $mysqli)
             $cells[] = $tot_sum_ekvar;
             $cells[] = $cnt_tot;
             $cells[] = $tot_sum;
+            $response->rows[$num] = ['id' => (isset($r['rid']) ? $r['rid'] : (isset($r['id']) ? $r['id'] : $num)), 'cell' => $cells];
         }
 
         while ($mysqli->more_results() && $mysqli->next_result()) {
