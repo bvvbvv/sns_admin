@@ -88,9 +88,11 @@ function test_select_ajax($w_arr, $mysqli)
 
                 $response->rows[$num] = ['id' => (isset($r['rid']) ? $r['rid'] : (isset($r['id']) ? $r['id'] : $num)), 'cell' => $cells];
 
-                $num++; $cnt_tot += $row_cnt; $tot_sum += $row_tot; $total++;
+                $num++; $cnt_tot += $row_cnt; $tot_sum += $row_tot; 
+                //$total++;
             }
             $cells = [];
+            $cells[] = $total+1;
             $cells[] = 'Сумма по всем реселлерам';
             $cells[] = $tot_cnt_bank;
             $cells[] = $tot_sum_bank;
