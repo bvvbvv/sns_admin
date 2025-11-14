@@ -12,12 +12,10 @@ include './utility_radius_pay.php';
     <!-- <link rel="stylesheet" type="text/css" href="./css/list_pay.css"> -->
     <script type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="./js/datatables.min.js"></script>
-    <!-- Библиотеки для TableExport -->
+    <!-- Библиотеки для TableExport 2 Excel -->
   <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.core.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tableexport@5.2.0/dist/js/tableexport.min.js"></script> -->
-
+  
     <style type="text/css">
         .dataTables_wrapper { margin-top: 20px; margin-bottom: 20px; }
         table.dataTable { width: 100%; margin: 15px 0; }
@@ -31,29 +29,17 @@ include './utility_radius_pay.php';
             <td style="text-align: right" width="50%"> Дата с: 
             </td>
             <td style="text-align: left">
-              <input type="date" id="date_begin" value="2025-11-01"></label>
+              <input type="date" id="date_begin"></label>
             </td>
         </tr>
         <tr>
             <td style="text-align: right" width="50%"> по: 
             </td>
             <td style="text-align: left">
-              <input type="date" id="date_end" value="2025-11-13" ></label>
+              <input type="date" id="date_end" ></label>
             </td>   
         </tr>
-        <!--
-         <tr>
-            <td style="text-align: right" width="50%">    
-                Режим: 
-            </td>
-            <td style="text-align: left">
-            <select id="parentid">
-                <option value="total">Суммарно (total)</option>
-                <option value="bytrans">По транзакциям</option>
-            </select>
-            </td>
-        </tr>
-        -->
+        
         <tr><td  style="text-align:center; min-width: 120px;" colspan="2">
             <button class="btn" id="loadBtn">Получить отчет</button>
         </td>
@@ -64,7 +50,7 @@ include './utility_radius_pay.php';
 <div id="list_cmnt" style="margin-top:10px;font-size:small;color:blue; text-align: center;"></div>
 
 
-<div id="export2xls" class="container-div"> 
+<div id="export2xls" class="container-div" style="display:none"> 
     <button id="exportBtn" value="1111.xls" filename="fffname">Экспорт в Excel</button>
      </div>
     
@@ -72,46 +58,40 @@ include './utility_radius_pay.php';
 <div id="tableContainer" style="margin-top: 20px;"></div>
 
 <script defer>
-// $(function() {
-//   $('#exportBtn').on('click', function() {
-//     //debugger
-//     // Создаём экземпляр TableExport
-//       var table = TableExport(document.getElementById("paymentsTable"), {
-//         formats: ["xlsx"],          // какие форматы разрешены
-//         filename: "222users_data",     // имя файла
-//         sheetname: "Sheet1",        // имя листа
-//         exportButtons: false        // не добавлять автоматические кнопки
-//       });
+$(function() {
+    $('#exportBtn').on('click', function() {
 
-//       // Получаем экспортный объект (первый формат — xlsx)
-//       var exportData = table.getExportData()['paymentsTable']['xlsx'];
-
-//       // Экспортируем
-//       table.export2file(
-//         exportData.data,
-//         exportData.mimeType,
-//         exportData.filename,
-//         exportData.fileExtension
-//       );
-//   });
-// });
-
-document.getElementById('exportBtn').addEventListener('click', function() {
+//document.getElementById('exportBtn').addEventListener('click', function() {
     // Получаем таблицу
     var table = document.getElementById('paymentsTable');
-
+    debugger
+    filename='report:'+$(this).data('filename') + ".xlsx";
     // Преобразуем HTML таблицу в SheetJS workbook
     var wb = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
 
     // Сохраняем как файл .xlsx
-    XLSX.writeFile(wb, "33333.xlsx");
+    XLSX.writeFile(wb, filename);
   });
+}) 
 </script>
 
 <script type="text/javascript">
+ $(document).ready(function() {
+   // debugger
+    const today = new Date();
+  const cday = String(today.getDate()).padStart(2, '0'); // Получаем день и дополняем нулем, если нужно
+  const month = String(today.getMonth() + 1).padStart(2, '0'); // Получаем месяц (смещен на 1) и дополняем нулем
+  const year = today.getFullYear(); // Получаем год
+
+  const currentDay = year+'-'+month+'-'+cday; // Собираем строку в формате ДД-ММ-ГГГГ
+  const firstDay = `${year}-${month}-01`; // Собираем первый день месяца
+  $('#date_begin').val(firstDay); // Вставляем в поле
+  $('#date_end').val(currentDay); // Вставляем в поле
+});
+    // --------------------------------
     $(function(){
         var table = null;
-        var excel_file_name=$('#date_begin').val() + "-" +  $('date_end').val()+'.xls';
+        var excel_file_name='c_'+$('#date_begin').val() + '_po_' +  $('#date_end').val();
         function loadData() {
             var payload = {
                 action: 'test_select',
@@ -143,6 +123,7 @@ document.getElementById('exportBtn').addEventListener('click', function() {
                 // Если таблица уже существует, очищаем контейнер
                 if ($.fn.DataTable.isDataTable('#paymentsTable')) {
                     table.destroy();
+                    $('#export2xls').css('display','none');
                 }
                 $('#tableContainer').empty();
 
@@ -171,8 +152,11 @@ document.getElementById('exportBtn').addEventListener('click', function() {
                 
                 // Вставляем таблицу в контейнер
                 $('#tableContainer').html(tableHtml);
-               // exportHTML='<button id="exportBtn" filename='+excel_file_name+'">Экспорт в Excel</button>';
-                //$('#export2xls').html(exportHTML);
+               // exportHTML='<button id="exportBtn" filename="'+excel_file_name+'">Экспорт в Excel</button>';
+               // $('#export2xls').html(exportHTML);
+               $('#exportBtn').data('filename', excel_file_name);
+
+                $('#export2xls').css('display','flex');
                 // Инициализируем DataTables с данными
                 table = $('#paymentsTable').DataTable({
                     data: data,
