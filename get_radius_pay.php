@@ -91,8 +91,9 @@ $(function() {
     // --------------------------------
     $(function(){
         var table = null;
-        var excel_file_name='c_'+$('#date_begin').val() + '_po_' +  $('#date_end').val();
         function loadData() {
+            var excel_file_name='c_'+$('#date_begin').val() + '_po_' +  $('#date_end').val();
+            debugger
             var payload = {
                 action: 'test_select',
                 date_begin: $('#date_begin').val(),
