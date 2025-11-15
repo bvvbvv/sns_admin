@@ -20,7 +20,18 @@ include './utility_radius_pay.php';
     <style type="text/css">
         .dataTables_wrapper { margin-top: 20px; margin-bottom: 20px; }
         table.dataTable { width: 90%; margin: 15px 0; font-size: small;}
-
+        #paymentsTable tbody tr:last-child { 
+             font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        #paymentsTable td:last-child, #paymentsTable th:last-child {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        #paymentsTable tbody tr:last-child td:last-child {
+            color: crimson;
+            background-color: #bbbbbbff;
+        }
     </style>
 </head>
 <body>
@@ -194,14 +205,20 @@ $(function() {
                     columnDefs:
                     [
                         {
-                            targets: -1,
+                            
                             className: 'dt-body-center'
                         }
                     ],
                     pageLength: 25,
-                    order: [[0,'asc']],
+                      lengthChange: false,
+                       paging: false,
+                       info: false,           // опционально, убрать "Showing 1 to ..."
+                   // order: [[0,'asc']], // сортировка по первому столбцу
+                    ordering:false, // сортировка по остальным стобцам убирается
+                    searching: false, // убираем поле ввода "Поиск"
                     responsive: true,
-                    language: { url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Russian.json' }
+                    //language: { url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Russian.json' }
+                    language: { url: './russian.json' }
                 });
 
             }).fail(function(jqXHR, status, err){
