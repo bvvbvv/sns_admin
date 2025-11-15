@@ -12,13 +12,15 @@ include './utility_radius_pay.php';
     <!-- <link rel="stylesheet" type="text/css" href="./css/list_pay.css"> -->
     <script type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="./js/datatables.min.js"></script>
+    
     <!-- Библиотеки для TableExport 2 Excel -->
   <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   
     <style type="text/css">
         .dataTables_wrapper { margin-top: 20px; margin-bottom: 20px; }
-        table.dataTable { width: 100%; margin: 15px 0; }
+        table.dataTable { width: 90%; margin: 15px 0; font-size: small;}
+
     </style>
 </head>
 <body>
@@ -207,8 +209,9 @@ $(function() {
                 console.error('AJAX fail:', jqXHR, status, err);
             });
         }
-
+        
         $('#loadBtn').on('click', function(e){ e.preventDefault(); loadData(); });
+
     });
 </script>
 
