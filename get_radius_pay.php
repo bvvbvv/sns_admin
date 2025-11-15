@@ -18,8 +18,8 @@ include './utility_radius_pay.php';
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   
     <style type="text/css">
-        .dataTables_wrapper { margin-top: 20px; margin-bottom: 20px; }
-        table.dataTable { width: 90%; margin: 15px 0; font-size: small;}
+        .dataTables_wrapper { margin-top: 10px; margin-bottom: 20px; }
+        table.dataTable { width: 80%; margin: 15px 0; font-size: small;}
         #paymentsTable tbody tr:last-child { 
              font-weight: bold;
             background-color: #f0f0f0;
@@ -168,7 +168,7 @@ $(function() {
                         <thead>
                             <tr>
                                 <th>№</th>
-                                <th>Реселлер / Абонент</th>
+                                <th>Реселлер </th>
                                 <th>Банк (шт)</th>
                                 <th>Банк (сумма)</th>
                                 <th>Наличка (шт)</th>
@@ -192,15 +192,15 @@ $(function() {
                     data: data,
                     columns: [
                         { title: '№' },
-                        { title: 'Реселлер / Абонент' },
+                        { title: 'Реселлер' },
                         { title: 'Банк (шт)' },
-                        { title: 'Банк (сумма)' },
-                        { title: 'Наличка (шт)' },
-                        { title: 'Наличка (сумма)' },
-                        { title: 'Эквайринг (шт)' },
-                        { title: 'Эквайринг (сумма)' },
+                        { title: 'Банк (грн)' },
+                        { title: 'Нал (шт)' },
+                        { title: 'Нал (грн)' },
+                        { title: 'Эквайр (шт)' },
+                        { title: 'Эквайр (грн)' },
                         { title: 'Всего (шт)' },
-                        { title: 'Всего (сумма)' }
+                        { title: 'Всего (грн)' }
                     ],
                     columnDefs:
                     [
