@@ -151,7 +151,7 @@ $(function() {
                 // Создаём таблицу динамически
                 var tableHtml = `
                     
-                    <table id="paymentsTable" class="display" style="width:100%">
+                    <table id="paymentsTable" class="compact hover cell-border order-column" style="width:100%">
                         <thead>
                             <tr>
                                 <th>№</th>
@@ -188,6 +188,13 @@ $(function() {
                         { title: 'Эквайринг (сумма)' },
                         { title: 'Всего (шт)' },
                         { title: 'Всего (сумма)' }
+                    ],
+                    columnDefs:
+                    [
+                        {
+                            targets: -1,
+                            className: 'dt-body-center'
+                        }
                     ],
                     pageLength: 25,
                     order: [[0,'asc']],
