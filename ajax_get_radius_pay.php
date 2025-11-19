@@ -116,6 +116,9 @@ function test_select_ajax($w_arr, $mysqli)
                 $num++; $cnt_tot += $row_cnt; $tot_sum += $row_tot; 
                 $total++;
             }
+            $tot_proc_bank=round($tot_proc_bank,2);
+            $tot_proc_ekvar=round($tot_proc_ekvar,2);
+            $tot_proc_local=round($tot_proc_local,2);
             $cells = [];
             $cells[] = $total+1;
             $cells[] = 'Сумма по всем реселлерам';
