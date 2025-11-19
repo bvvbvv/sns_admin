@@ -24,8 +24,13 @@ include './utility_radius_pay.php';
              font-weight: bold;
             background-color: #f0f0f0;
         }
+        #paymentsTable td:nth-last-child(2), #paymentsTable th:nth-last-child(2) {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
         #paymentsTable td:last-child, #paymentsTable th:last-child {
             font-weight: bold;
+            color:crimson;
             background-color: #f0f0f0;
         }
         #paymentsTable tbody tr:last-child td:last-child {
