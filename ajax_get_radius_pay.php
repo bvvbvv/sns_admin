@@ -95,6 +95,7 @@ function test_select_ajax($w_arr, $mysqli)
             $cells = [];
             $cells[] = $total+1;
             $cells[] = 'Сумма по всем реселлерам';
+            $cells[] = '-';
             $cells[] = $tot_cnt_bank;
             $cells[] = $tot_sum_bank;
             $cells[] = $tot_cnt_local; 
