@@ -97,7 +97,7 @@ function test_select_ajax($w_arr, $mysqli)
 
                 $cells[] = isset($r['cnt_tot']) ? $r['cnt_tot'] : $row_cnt;
                 $cells[] = isset($r['tot_sum']) ? $r['tot_sum'] : $row_tot;
-                $cells[]=$proc_bank+$proc_ekvar;  // Итоговая сумма для реселлера только по безналу
+                $cells[]=round($proc_bank+$proc_ekvar,2);  // Итоговая сумма для реселлера только по безналу
 
                 $tot_cnt_bank += isset($r['cnt_bank']) ? (int)$r['cnt_bank'] : 0;
                 $tot_sum_bank += isset($r['sum_bank']) ? (float)$r['sum_bank'] : 0.0;
