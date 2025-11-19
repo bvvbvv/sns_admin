@@ -5,6 +5,7 @@ BEGIN
 DECLARE cnt_bank, cnt_local, cnt_ekvar, cnt_tot, rid INT(11) DEFAULT 0;
 DECLARE sum_bank, sum_local, sum_ekvar, tot_sum DECIMAL(10,2) DEFAULT 0.0;
 DECLARE res_name CHAR(128) CHARACTER SET utf8;
+DECLARE sys_name CHAR(20);
 DECLARE done BOOLEAN DEFAULT 0;
 DECLARE cur1 CURSOR FOR SELECT id, longname, name FROM `radius`.`user` WHERE name like 'rs_damansk' or name like 'rs_pshichenko' or name like 'rs_isaoptik' or name like 'rs_isaenko';
 DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
