@@ -24,5 +24,5 @@ if (!empty($_COOKIE['remember_token'])) {
 }
  
 // Если авторизации нет
-header("Location:"."__DIR__"."/login.php");
+header("Location:".__DIR__."/login.php");
 exit;
