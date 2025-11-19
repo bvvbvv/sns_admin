@@ -71,6 +71,7 @@ function test_select_ajax($w_arr, $mysqli)
                 $cells = [];
                 $cells[] = $total + 1;
                 $cells[] = isset($r['res_name']) ? $r['res_name'] : (isset($r['longname']) ? $r['longname'] : '');
+                $cells[] = isset($r['sys_name']) ? $r['sys_name'] : '';
                 $cells[] = isset($r['cnt_bank']) ? $r['cnt_bank'] : '';
                 $cells[] = isset($r['sum_bank']) ? $r['sum_bank'] : '';
                 $cells[] = isset($r['cnt_local']) ? $r['cnt_local'] : '';
